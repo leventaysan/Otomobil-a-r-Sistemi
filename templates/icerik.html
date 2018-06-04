@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="banner">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <!-- Telefon ekranları için menü butonu -->
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- İsim Soyisim veya Marka İsmi -->
+            <a href="{% url 'home' %}" class="navbar-brand">Django Dersleri</a>
+        </div>
+
+        <nav class="collapse navbar-collapse" role="navigation">
+
+            <!-- Arama Çubuğu -->
+            <form class="navbar-form navbar-left" role="search" method="GET" action="">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="Search on posts" value="{{ request.GET.q }}" >
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit" value="Ara">
+                    </span>
+                </div>
+            </form>
+
+            <!-- Temel Sayfalar -->
+            <ul class="nav navbar-nav navbar-right">
+
+                    <li><a>Yazı Ekle</a></li>
+
+                <li><a>Anasayfa</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Hakkımda</a></li>
+                <li><a>İletişim</a></li>
+
+
+            </ul>
+
+        </nav>
+
+    </div>
+</nav>
+  <script src=" static/js/bootstrap.min.js"></script>
+</body>
+</html>

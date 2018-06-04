@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load crispy_forms_tags %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>Plaka: <strong>{{ query }} </strong></p>
+<p>İnfo:</p>
+{% if cars %}
+{% for a in cars %}
+    <ul>
+        <li><p>Owner:</p>{{a.owner}}</li>
+        <li><p>Date:</p>{{a.date}}</li>
+        <li><p>Phone:</p>{{a.phone}}</li>
+    </ul>
+{% endfor %}
+
+<!-- <form action="/" method="POST">
+ {% csrf_token %}
+     <h1>Mesaj Gönder</h1>
+
+    <button type="submit" class="btn btn-primary" >Bildirim gönder</button>
+</form>-->
+
+{% else %}
+<p>Arac bulunamadi</p>
+{% endif %}
+
+<!--<h3>Yorumlar:</h3>
+    {% for comment in post.bildirim.all %}
+        <h4>{{ comment.name }}
+        <h4>{{ comment.content }}
+    {% endfor %}-->
+
+
+</body>
+</html>
